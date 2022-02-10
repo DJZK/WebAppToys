@@ -38,6 +38,8 @@ namespace Telegram
         private void TelegramBrowser_CoreWebView2InitializationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs e)
         {
             TelegramBrowser.CoreWebView2.Settings.AreDevToolsEnabled = false;
+            TelegramBrowser.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
+            TelegramBrowser.ZoomFactor = 0.9;
             TelegramBrowser.CoreWebView2.NewWindowRequested += CoreWebView2_NewWindowRequested;
         }
         private void CoreWebView2_NewWindowRequested(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs e)
