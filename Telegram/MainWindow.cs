@@ -12,6 +12,10 @@ namespace Telegram
 {
     public partial class MainWindow : Form
     {
+
+        private bool bypass;
+        private bool first = true;
+        private FormWindowState windowState;
         public MainWindow()
         {
             InitializeComponent();
@@ -38,6 +42,7 @@ namespace Telegram
         private void TelegramBrowser_CoreWebView2InitializationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs e)
         {
             TelegramBrowser.CoreWebView2.Settings.AreDevToolsEnabled = false;
+            TelegramBrowser.CoreWebView2.IsMuted = false;
             TelegramBrowser.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
             TelegramBrowser.ZoomFactor = 0.9;
             TelegramBrowser.CoreWebView2.NewWindowRequested += CoreWebView2_NewWindowRequested;
@@ -46,6 +51,39 @@ namespace Telegram
         {
             System.Diagnostics.Process.Start(e.Uri);
             e.Handled = true;
+        }
+
+        private void notifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+        
+            Show();
+            WindowState = windowState;
+        }
+
+        private void ExitApplication_Click(object sender, EventArgs e)
+        {
+            bypass = true;
+            Application.Exit();
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!bypass)
+            {
+                e.Cancel = true;
+                windowState = this.WindowState;
+                WindowState = FormWindowState.Minimized;
+                Hide();
+                notifyIcon1.Visible = true;
+
+                if (first)
+                {
+                    notifyIcon1.ShowBalloonTip(1000);
+                    first = false;
+                }
+                
+            }
+
         }
     }
 }
