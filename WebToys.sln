@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger", "Messenger\Messenger.csproj", "{5F337691-D4AC-4B34-9F79-11A9F6248C90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telegram", "Telegram\Telegram.csproj", "{CC227B27-3622-47C5-93A3-AFB209A95417}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5F337691-D4AC-4B34-9F79-11A9F6248C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F337691-D4AC-4B34-9F79-11A9F6248C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F337691-D4AC-4B34-9F79-11A9F6248C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC227B27-3622-47C5-93A3-AFB209A95417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC227B27-3622-47C5-93A3-AFB209A95417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC227B27-3622-47C5-93A3-AFB209A95417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC227B27-3622-47C5-93A3-AFB209A95417}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
