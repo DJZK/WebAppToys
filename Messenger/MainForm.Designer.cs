@@ -28,13 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.MessengerBrowser = new Microsoft.Web.WebView2.WinForms.WebView2();
+            ((System.ComponentModel.ISupportInitialize)(this.MessengerBrowser)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // MessengerBrowser
+            // 
+            this.MessengerBrowser.CreationProperties = null;
+            this.MessengerBrowser.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.MessengerBrowser.Location = new System.Drawing.Point(0, -1);
+            this.MessengerBrowser.Name = "MessengerBrowser";
+            this.MessengerBrowser.Size = new System.Drawing.Size(697, 419);
+            this.MessengerBrowser.TabIndex = 0;
+            this.MessengerBrowser.ZoomFactor = 1D;
+            this.MessengerBrowser.CoreWebView2InitializationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs>(this.MessengerBrowser_CoreWebView2InitializationCompleted);
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(695, 417);
+            this.Controls.Add(this.MessengerBrowser);
+            this.MinimumSize = new System.Drawing.Size(711, 456);
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Messenger";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
+            ((System.ComponentModel.ISupportInitialize)(this.MessengerBrowser)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Microsoft.Web.WebView2.WinForms.WebView2 MessengerBrowser;
     }
 }
 
