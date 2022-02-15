@@ -73,7 +73,6 @@ namespace Telegram
                 e.Cancel = true;
                 windowState = this.WindowState;
                 WindowState = FormWindowState.Minimized;
-                Hide();
                 notifyIcon1.Visible = true;
 
                 if (first)
