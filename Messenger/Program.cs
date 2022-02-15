@@ -22,7 +22,7 @@ namespace Messenger
                 bool isAnotherInstanceOpen = !mutex.WaitOne(TimeSpan.Zero);
                 if (isAnotherInstanceOpen)
                 {
-                    MessageBox.Show("Application already running! Check system tray", "Application Running", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Application already running!", "Application Running", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
