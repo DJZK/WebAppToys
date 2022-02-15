@@ -40,7 +40,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "D:\PC\Desktop\Builder\Telegram\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\PC\Desktop\Builder\Telegram\Telegram\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "D:\PC\Desktop\Builder\Telegram\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "D:\PC\Desktop\Builder\Runtimes\dotNet.exe"; DestDir: "{app}\runtimes"; Flags: ignoreversion; AfterInstall: RunDotNet
 Source: "D:\PC\Desktop\Builder\Runtimes\webview.exe"; DestDir: "{app}\runtimes"; Flags: ignoreversion; AfterInstall: RunWebView
 
