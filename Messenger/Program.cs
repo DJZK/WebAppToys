@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Messenger
 {
@@ -14,9 +15,23 @@ namespace Messenger
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            using (var mutex = new Mutex(false, "Messenger"))
+            {
+                // TimeSpan.Zero to test the mutex's signal state and
+                // return immediately without blocking
+                bool isAnotherInstanceOpen = !mutex.WaitOne(TimeSpan.Zero);
+                if (isAnotherInstanceOpen)
+                {
+                    MessageBox.Show("Application already running! Check system tray", "Application Running", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new MainForm());
+
+                mutex.ReleaseMutex();
+            }
         }
     }
 }
