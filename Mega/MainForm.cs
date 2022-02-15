@@ -12,6 +12,8 @@ namespace Mega
 {
     public partial class MainForm : Form
     {
+        private bool bypass = false, first = true;
+        private FormWindowState windowState;
         public MainForm()
         {
             InitializeComponent();
@@ -22,6 +24,8 @@ namespace Mega
             Text = "Mega Browser";
             Icon = Properties.Resources.mega;
             MegaBrowser.Size = Size;
+            notifyIcon1.Icon = Icon;
+            notifyIcon1.Visible = true;
 
             MegaBrowser.Width = Width - 15;
             MegaBrowser.Height = Height - 35;
@@ -42,6 +46,35 @@ namespace Mega
         private void CoreWebView2_NewWindowRequested(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bypass = true;
+            Application.Exit();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!bypass)
+            {
+                e.Cancel = true;
+                windowState = this.WindowState;
+                WindowState = FormWindowState.Minimized;
+                notifyIcon1.Visible = true;
+
+                if (first)
+                {
+                    notifyIcon1.ShowBalloonTip(1000);
+                    first = false;
+                }
+            }
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Show();
+            WindowState = windowState;
         }
 
         private void MainForm_Resize(object sender, EventArgs e)
