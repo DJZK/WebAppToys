@@ -21,13 +21,13 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={userappdata}\Pixel Cowboy Studios\{#MyAppName}
 DisableDirPage=yes
 DisableProgramGroupPage=yes
-LicenseFile=D:\PC\Desktop\Telegram\docs\EULA.txt
-InfoBeforeFile=D:\PC\Desktop\Telegram\docs\System Requirements.txt
+LicenseFile=D:\PC\Desktop\Builder\Telegram\docs\EULA.txt
+InfoBeforeFile=D:\PC\Desktop\Builder\Telegram\docs\System Requirements.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=D:\PC\Desktop\telegram-output
+OutputDir=D:\PC\Desktop\Builder\Telegram\telegram-output
 OutputBaseFilename=telegram-setup
-SetupIconFile=D:\PC\Desktop\Telegram\docs\Telegram.ico
+SetupIconFile=D:\PC\Desktop\Builder\Telegram\docs\Telegram.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -39,10 +39,10 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}";
 
 [Files]
-Source: "D:\PC\Desktop\Telegram\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\PC\Desktop\Telegram\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "D:\PC\Desktop\runtimes\dotNet.exe"; DestDir: "{app}\runtimes"; Flags: ignoreversion; AfterInstall: RunDotNet
-Source: "D:\PC\Desktop\runtimes\webview.exe"; DestDir: "{app}\runtimes"; Flags: ignoreversion; AfterInstall: RunWebView
+Source: "D:\PC\Desktop\Builder\Telegram\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\PC\Desktop\Builder\Telegram\Telegram\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "D:\PC\Desktop\Builder\Runtimes\dotNet.exe"; DestDir: "{app}\runtimes"; Flags: ignoreversion; AfterInstall: RunDotNet
+Source: "D:\PC\Desktop\Builder\Runtimes\webview.exe"; DestDir: "{app}\runtimes"; Flags: ignoreversion; AfterInstall: RunWebView
 
 [Code]
 procedure RunDotNet;
