@@ -25,7 +25,7 @@ LicenseFile=D:\PC\Desktop\Builder\Telegram\docs\EULA.txt
 InfoBeforeFile=D:\PC\Desktop\Builder\Telegram\docs\System Requirements.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=D:\PC\Desktop\Builder\Telegram\telegram-output
+OutputDir=D:\PC\Desktop\Builder\Output
 OutputBaseFilename=telegram-setup
 SetupIconFile=D:\PC\Desktop\Builder\Telegram\docs\Telegram.ico
 Compression=lzma
