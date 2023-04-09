@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telegram", "Telegram\Telegr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mega", "Mega\Mega.csproj", "{66BF892C-7976-4B6A-A891-099AD4C1FA69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mushroom", "Mushroom\Mushroom.csproj", "{3925D3C5-A89B-4756-896A-A60DC78588EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{66BF892C-7976-4B6A-A891-099AD4C1FA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66BF892C-7976-4B6A-A891-099AD4C1FA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66BF892C-7976-4B6A-A891-099AD4C1FA69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3925D3C5-A89B-4756-896A-A60DC78588EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3925D3C5-A89B-4756-896A-A60DC78588EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3925D3C5-A89B-4756-896A-A60DC78588EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3925D3C5-A89B-4756-896A-A60DC78588EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
