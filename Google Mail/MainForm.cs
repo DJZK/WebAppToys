@@ -15,15 +15,15 @@ namespace Mushroom
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Text = "Google Chat";
-            Icon = Google_Chat.Properties.Resources.Google_Chat;
+            Text = "Google Mail";
+            
             MushroomBrowser.Size = Size;
             notifyIcon1.Icon = Icon;
             notifyIcon1.Visible = true;
 
             MushroomBrowser.Width = Width - 15;
             MushroomBrowser.Height = Height - 35;
-            MushroomBrowser.Source = new Uri("https://mail.google.com/chat");
+            MushroomBrowser.Source = new Uri("https://mail.google.com/");
         }
 
         private void CoreWebView2_NewWindowRequested(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs e)
