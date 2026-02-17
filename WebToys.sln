@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32126.317
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11505.172 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger", "Messenger\Messenger.csproj", "{5F337691-D4AC-4B34-9F79-11A9F6248C90}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google Chat", "Google Chat\Google Chat.csproj", "{B3C439F3-C34C-468A-B24D-C0F3CB88A7AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google Mail", "Google Mail\Google Mail.csproj", "{641B96CD-0D46-4DC0-ABD4-B18E06269DF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Techpos", "Techpos\Techpos.csproj", "{3DE697BE-FE00-4C3C-916B-49547C630BF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{641B96CD-0D46-4DC0-ABD4-B18E06269DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{641B96CD-0D46-4DC0-ABD4-B18E06269DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{641B96CD-0D46-4DC0-ABD4-B18E06269DF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE697BE-FE00-4C3C-916B-49547C630BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE697BE-FE00-4C3C-916B-49547C630BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE697BE-FE00-4C3C-916B-49547C630BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE697BE-FE00-4C3C-916B-49547C630BF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
