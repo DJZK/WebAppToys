@@ -79,10 +79,8 @@ namespace Telegram
                 {
                     notifyIcon1.ShowBalloonTip(1000);
                     first = false;
-                }
-                
+                } 
             }
-
         }
     }
 }
