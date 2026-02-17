@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,9 +15,24 @@ namespace Techpos
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            using (var mutex = new Mutex(false, "Techpos"))
+            {
+                // TimeSpan.Zero to test the mutex's signal state and
+                // return immediately without blocking
+                bool isAnotherInstanceOpen = !mutex.WaitOne(TimeSpan.Zero);
+                if (isAnotherInstanceOpen)
+                {
+                    MessageBox.Show("Application already running!", "Application Running", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // main application entry point
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new MainWindow());
+
+                mutex.ReleaseMutex();
+            }
         }
     }
 }
